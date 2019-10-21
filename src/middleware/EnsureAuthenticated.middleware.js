@@ -2,6 +2,7 @@
 
 const User = require('../models/User.model');
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 function ensureAuthenticated(req, res, next) {
     if (!req.headers.authorization) {
